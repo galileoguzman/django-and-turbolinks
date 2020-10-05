@@ -75,3 +75,13 @@ After you made the above steps, you will be able to run the project, do not forg
 python manage.py migrate
 python manage.py run server
 ```
+
+### Database population
+
+We have installed [python-faker](https://faker.readthedocs.io/en/master/) to generate fake values for our articles and start testing.
+
+To use it, you can run the next custom *django command*.
+
+```
+python manage.py articles_faker --number=200
+```

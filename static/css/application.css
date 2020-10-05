@@ -1,0 +1,16 @@
+body {
+    position: relative;
+}
+
+body,
+.absolute-wrapper {
+    min-height: 100vh;
+    padding: 0;
+    width: 100%;
+}
+
+.content {
+    float: none;
+    margin: 0 auto;
+    width: 85vw;
+}

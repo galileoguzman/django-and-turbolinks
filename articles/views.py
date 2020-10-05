@@ -1,3 +1,5 @@
+import random
+import time
 from django.views.generic.list import ListView
 from .models import Article
 
@@ -7,3 +9,10 @@ class ArticlesView(ListView):
     context_object_name = 'articles'
     template_name = 'articles/index.html'
     ordering = ['-published_at']
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+
+        time.sleep(random.randint(2, 8))
+
+        return context
